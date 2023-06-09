@@ -17,8 +17,8 @@ on:
           - name: Configure AWS Credentials
             uses: aws-actions/configure-aws-credentials@v1
             with:
-              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+              aws-access-key-id: ${{ AKIARRR5E42DXOUB5SUZ}}
+              aws-secret-access-key: ${{ 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 }}
               aws-region: eu-central-1
 
           - name: Push to S3
