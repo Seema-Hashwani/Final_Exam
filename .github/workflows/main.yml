@@ -8,7 +8,7 @@ on:
       main
 
     jobs:
-      steps
+      steps:
         - name: Checkout Repository Code
           uses: actions/checkout@v3
 
