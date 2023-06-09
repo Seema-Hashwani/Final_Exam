@@ -7,20 +7,20 @@ on:
     branches:
       main
 
-    jobs:
-      deploy:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout Repository Code
-            uses: actions/checkout@v3
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v3
 
-          - name: Configure AWS Credentials
-            uses: aws-actions/configure-aws-credentials@v1
-            with:
-              aws-access-key-id: ${{ AKIARRR5E42DXOUB5SUZ}}
-              aws-secret-access-key: ${{ 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 }}
-              aws-region: eu-central-1
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ AKIARRR5E42DXOUB5SUZ}}
+          aws-secret-access-key: ${{ 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 }}
+          aws-region: eu-central-1
 
-          - name: Push to S3
-            run: aws sync . s3://www.final-exam-devops.com
+      - name: Push to S3
+        run: aws sync . s3://www.final-exam-devops.com
         
